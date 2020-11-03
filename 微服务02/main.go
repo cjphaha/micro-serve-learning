@@ -1,1 +1,1 @@
-package 微服务02
+package micro_serve_2

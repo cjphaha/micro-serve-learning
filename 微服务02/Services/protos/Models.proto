@@ -1,6 +1,5 @@
 syntax = "proto3";
-
-package Service;
+package Services;
 
 //商品模型
 message ProdModel{
