@@ -20,12 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57b9acb6-43a1-4e0f-ad7a-cbc65ac1f62e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/微服务01.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/微服务02/ServiceImpl/ProdService.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/微服务02/gen.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc-learning/proto/helloword.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/微服务02/Services/protos/Models.proto" beforeDir="false" afterPath="$PROJECT_DIR$/微服务02/Services/protos/Models.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/微服务02/Services/protos/ProdService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/微服务02/Services/protos/ProdService.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/微服务02/ServiceImpl/ProdService.go" beforeDir="false" afterPath="$PROJECT_DIR$/微服务02/ServiceImpl/ProdService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/微服务02/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/微服务02/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/微服务02/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/微服务02/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/微服务02/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/微服务02/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

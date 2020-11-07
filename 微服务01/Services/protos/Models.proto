@@ -1,0 +1,8 @@
+syntax = "proto3";
+package Services;
+
+//商品模型
+message ProdModel{
+  int32 ProdID = 1;
+  string ProdName = 2;
+}

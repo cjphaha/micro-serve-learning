@@ -17,3 +17,7 @@ message ProdListResponse{
 service ProdService{
   rpc GetProdsList(ProdsRequest) returns(ProdListResponse);
 }
+/*生成的方法
+protoc --micro_out=../ --go_out=../ ProdService.proto
+
+ */
