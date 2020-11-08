@@ -7,6 +7,7 @@ import (
 	"context"
 	"micro-serve-2/Services"
 	"strconv"
+	"time"
 )
 
 //测试方法
@@ -19,6 +20,7 @@ type ProdService struct {
 }
 
 func(*ProdService) GetProdsList(ctx context.Context,in *Services.ProdsRequest,res *Services.ProdListResponse) error{
+	time.Sleep(time.Second*3)
 	models := make([]*Services.ProdModel,0)
 	var i int32
 	for i = 0;i < in.Size;i ++{
