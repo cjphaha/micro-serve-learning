@@ -6,7 +6,24 @@ import (
 	"github.com/afex/hystrix-go/hystrix"
 	"github.com/gin-gonic/gin"
 	"miniserver/Services"
+	"strconv"
 )
+
+//测试方法
+func newProd(id int32, pname string) *Services.ProdModel {
+	return &Services.ProdModel{ProdName: pname, ProdID: id}
+}
+
+func defaultProds() (*Services.ProdListResponse,error){
+	models := make([]*Services.ProdModel,0)
+	var i int32
+	for i = 0;i < 5;i ++{
+		models = append(models,newProd(100 + i,"prodname" + strconv.Itoa(100 + int(i))))
+	}
+	res := &Services.ProdListResponse{}
+	res.Data = models
+	return res,nil
+}
 
 func GetProdsList(c *gin.Context)  {
 	prodService := c.Keys["prodService"].(Services.ProdService)//后面这个(Services.ProdService)是类型断言
@@ -32,7 +49,10 @@ func GetProdsList(c *gin.Context)  {
 		err := hystrix.Do("getprods", func() error {
 			prodRes,err = prodService.GetProdsList(context.Background(),&prodreq)
 			return err
-		},nil)
+		}, func(e error) error {
+			prodRes,err = defaultProds()
+			return err
+		})//fallback降级处理
 		if err != nil{
 			c.JSON(500,gin.H{
 				"status":err.Error(),
