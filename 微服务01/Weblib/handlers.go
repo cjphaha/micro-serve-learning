@@ -3,7 +3,6 @@ package Weblib
 import (
 	"context"
 	"fmt"
-	"github.com/afex/hystrix-go/hystrix"
 	"github.com/gin-gonic/gin"
 	"miniserver/Services"
 	"strconv"
@@ -37,22 +36,7 @@ func GetProdsList(c *gin.Context)  {
 			"status":err.Error(),
 		})
 	}else {
-		//熔断代码改造
-		//设置config
-		configA := hystrix.CommandConfig{
-			Timeout: 1000,
-		}
-		var prodRes *Services.ProdListResponse
-		//配置command
-		hystrix.ConfigureCommand("getprods",configA)
-		//执行，实行do方法
-		err := hystrix.Do("getprods", func() error {
-			prodRes,err = prodService.GetProdsList(context.Background(),&prodreq)
-			return err
-		}, func(e error) error {
-			prodRes,err = defaultProds()
-			return err
-		})//fallback降级处理
+		prodRes,err := prodService.GetProdsList(context.Background(),&prodreq)
 		if err != nil{
 			c.JSON(500,gin.H{
 				"status":err.Error(),
@@ -62,5 +46,30 @@ func GetProdsList(c *gin.Context)  {
 			"data":prodRes,
 			"err":err,
 		})
+		////熔断代码改造
+		////设置config
+		//configA := hystrix.CommandConfig{
+		//	Timeout: 1000,
+		//}
+		//var prodRes *Services.ProdListResponse
+		////配置command
+		//hystrix.ConfigureCommand("getprods",configA)
+		////执行，实行do方法
+		//err := hystrix.Do("getprods", func() error {
+		//	prodRes,err = prodService.GetProdsList(context.Background(),&prodreq)
+		//	return err
+		//}, func(e error) error {
+		//	prodRes,err = defaultProds()
+		//	return err
+		//})//fallback降级处理
+		//if err != nil{
+		//	c.JSON(500,gin.H{
+		//		"status":err.Error(),
+		//	})
+		//}
+		//c.JSON(200,gin.H{
+		//	"data":prodRes,
+		//	"err":err,
+		//})
 	}
 }

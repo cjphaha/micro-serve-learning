@@ -10,6 +10,7 @@ import (
 	"github.com/micro/go-plugins/registry/consul"
 	"miniserver/Services"
 	"miniserver/Weblib"
+	"miniserver/wrappers"
 )
 
 /*
@@ -21,7 +22,7 @@ type logWrapper struct {
 }
 //重写call方法
 func(o *logWrapper)Call(ctx context.Context, req client.Request, rsp interface{},pots ...client.CallOption) error{
-	fmt.Println("调用接口")
+	fmt.Println("调用接口,这是装饰器NewLogWrapper")
 	o.Client.Call(ctx,req,rsp)
 	return nil
 }
@@ -39,6 +40,7 @@ func main() {
 		micro.Address(":8012"),
 		micro.Registry(consulReg),//注册到consul
 		micro.WrapClient(NewLogWrapper),//注册装饰器
+		micro.WrapClient(wrappers.NewProdsWrapper),
 		)
 	prodService := Services.NewProdService("Prodserve",myService.Client())
 	httpServer := web.NewService(//对应于http，这是在consul里面注册的过程
