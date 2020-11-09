@@ -35,6 +35,7 @@ var _ server.Option
 
 type ProdService interface {
 	GetProdsList(ctx context.Context, in *ProdsRequest, opts ...client.CallOption) (*ProdListResponse, error)
+	GetProdsDetail(ctx context.Context, in *ProdsRequest, opts ...client.CallOption) (*ProdDetailResponse, error)
 }
 
 type prodService struct {
@@ -65,15 +66,27 @@ func (c *prodService) GetProdsList(ctx context.Context, in *ProdsRequest, opts .
 	return out, nil
 }
 
+func (c *prodService) GetProdsDetail(ctx context.Context, in *ProdsRequest, opts ...client.CallOption) (*ProdDetailResponse, error) {
+	req := c.c.NewRequest(c.name, "ProdService.GetProdsDetail", in)
+	out := new(ProdDetailResponse)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // Server API for ProdService service
 
 type ProdServiceHandler interface {
 	GetProdsList(context.Context, *ProdsRequest, *ProdListResponse) error
+	GetProdsDetail(context.Context, *ProdsRequest, *ProdDetailResponse) error
 }
 
 func RegisterProdServiceHandler(s server.Server, hdlr ProdServiceHandler, opts ...server.HandlerOption) error {
 	type prodService interface {
 		GetProdsList(ctx context.Context, in *ProdsRequest, out *ProdListResponse) error
+		GetProdsDetail(ctx context.Context, in *ProdsRequest, out *ProdDetailResponse) error
 	}
 	type ProdService struct {
 		prodService
@@ -88,4 +101,8 @@ type prodServiceHandler struct {
 
 func (h *prodServiceHandler) GetProdsList(ctx context.Context, in *ProdsRequest, out *ProdListResponse) error {
 	return h.ProdServiceHandler.GetProdsList(ctx, in, out)
+}
+
+func (h *prodServiceHandler) GetProdsDetail(ctx context.Context, in *ProdsRequest, out *ProdDetailResponse) error {
+	return h.ProdServiceHandler.GetProdsDetail(ctx, in, out)
 }

@@ -9,11 +9,17 @@ message ProdModel{
 
 message ProdsRequest{
   int32 size = 1;
+  int32  prod_id = 2;//商品id。prodId
 }
 
 message ProdListResponse{
   repeated ProdModel data = 1;
 }
+
+message ProdDetailResponse{
+  ProdModel data = 1;
+}
 service ProdService{
   rpc GetProdsList(ProdsRequest) returns(ProdListResponse);
+  rpc GetProdsDetail(ProdsRequest) returns(ProdDetailResponse);
 }

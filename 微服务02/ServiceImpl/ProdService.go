@@ -2,7 +2,6 @@ package ServiceImpl
 //是一个实现类
 //对prodservice.micro.go 中service的具体的实现
 
-
 import (
 	"context"
 	"micro-serve-2/Services"
@@ -27,5 +26,11 @@ func(*ProdService) GetProdsList(ctx context.Context,in *Services.ProdsRequest,re
 		models = append(models,newProd(100 + i,"prodname" + strconv.Itoa(100 + int(i))))
 	}
 	res.Data = models
+	return nil
+}
+
+
+func(*ProdService) GetProdsDetail(ctx context.Context, req *Services.ProdsRequest, rsp *Services.ProdDetailResponse) error {
+	rsp.Data = newProd(req.ProdId,"商品详情")
 	return nil
 }

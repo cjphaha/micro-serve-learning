@@ -73,3 +73,8 @@ func GetProdsList(c *gin.Context)  {
 		//})
 	}
 }
+
+func GetProdDetail(c *gin.Context){
+	var prodReq Services.ProdsRequest
+	err := c.Bind(&prodReq)
+}
