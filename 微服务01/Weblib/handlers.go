@@ -76,5 +76,11 @@ func GetProdsList(c *gin.Context)  {
 
 func GetProdDetail(c *gin.Context){
 	var prodReq Services.ProdsRequest
-	err := c.Bind(&prodReq)
+	//binduri是针对于gei请求的
+	PanicIfError(c.BindUri(&prodReq))
+	prodService := c.Keys["prodService"].(Services.ProdService)
+	resp,_ := prodService.GetProdsDetail(context.Background(),&prodReq)
+	c.JSON(200,gin.H{
+		"data":resp.Data,
+	})
 }
