@@ -12,7 +12,7 @@ import (
 func newProd(id int32, pname string) *Services.ProdModel {
 	return &Services.ProdModel{ProdName: pname, ProdID: id}
 }
-//降级方法相关函数
+//降级方法相关函数，商品列表降级方法
 func defaultProds(rsp interface{}){
 	models := make([]*Services.ProdModel,0)
 	var i int32
@@ -25,7 +25,14 @@ func defaultProds(rsp interface{}){
 	//return res,nil
 }
 
-
+func defaultData(rsp interface{}){
+	switch t:=rsp.(type) {
+	case *Services.ProdListResponse:
+		defaultProds(rsp)
+	case *Services.ProdDetailResponse:
+		t.Data = newProd(10,"降级商品")
+	}
+}
 
 type ProdsWrapper struct {
 	client.Client
@@ -42,7 +49,8 @@ func(this *ProdsWrapper)Call(ctx context.Context, req client.Request, rsp interf
 	return hystrix.Do(cmdName,func() error{
 		return this.Client.Call(ctx,req,rsp)
 	}, func(e error) error {
-		defaultProds(rsp)
+		//defaultProds(rsp)
+		defaultData(rsp)
 		return nil
 	})
 	//这里的降级方法其实i就是改rsp

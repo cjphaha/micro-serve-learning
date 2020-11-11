@@ -40,7 +40,7 @@ func main() {
 		micro.Address(":8012"),
 		micro.Registry(consulReg),//注册到consul
 		micro.WrapClient(NewLogWrapper),//注册装饰器
-		micro.WrapClient(wrappers.NewProdsWrapper),
+		micro.WrapClient(wrappers.NewProdsWrapper),//降级函数
 		)
 	prodService := Services.NewProdService("Prodserve",myService.Client())
 	httpServer := web.NewService(//对应于http，这是在consul里面注册的过程

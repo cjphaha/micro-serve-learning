@@ -76,7 +76,11 @@ func GetProdsList(c *gin.Context)  {
 
 func GetProdDetail(c *gin.Context){
 	var prodReq Services.ProdsRequest
-	//binduri是针对于gei请求的
+	/*binduri是针对于gei请求的，可以获取接口后面跟着的字符
+	比如 http://localhost:8989/api/test/12123
+	binduri可以获取12123
+	PanicIfError用来处理绑定数据时候的异常
+	 */
 	PanicIfError(c.BindUri(&prodReq))
 	prodService := c.Keys["prodService"].(Services.ProdService)
 	resp,_ := prodService.GetProdsDetail(context.Background(),&prodReq)

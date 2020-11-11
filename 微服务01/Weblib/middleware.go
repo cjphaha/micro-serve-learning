@@ -5,7 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"miniserver/Services"
 )
-//添加统一处理错误的中间件
+
 func Initmiddleware(prodService Services.ProdService) gin.HandlerFunc{
 	return func(c *gin.Context) {
 		c.Keys = make(map[string]interface{})
@@ -19,7 +19,7 @@ func PanicIfError(err error){
 		panic(err)
 	}
 }
-
+//添加统一处理错误的中间件
 func ErrorMiddleware() gin.HandlerFunc{
 	return func(c *gin.Context) {
 		defer func() {
