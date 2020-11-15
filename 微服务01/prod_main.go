@@ -39,7 +39,7 @@ func main() {
 		micro.Name("Prodservew2134143.client"),
 		micro.Address(":8012"),
 		micro.Registry(consulReg),//注册到consul
-		micro.WrapClient(NewLogWrapper),//注册装饰器
+		//micro.WrapClient(NewLogWrapper),//注册装饰器
 		micro.WrapClient(wrappers.NewProdsWrapper),//降级函数
 		)
 	prodService := Services.NewProdService("Prodserve",myService.Client())

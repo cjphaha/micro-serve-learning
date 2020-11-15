@@ -1,0 +1,13 @@
+Log:2020/11/15 18:39:50 config.go:20: 日志开始 2020-11-15 18:39:50.18304 +0800 CST m=+0.002715526
+Log:2020/11/15 18:42:32 config.go:20: 日志开始 2020-11-15 18:42:32.397767 +0800 CST m=+0.004161605
+Log:2020/11/15 18:42:32 valite_test.go:24: TestValidate Key: 'User.UserPwd' Error:Field validation for 'UserPwd' failed on the 'min' tag
+Log:2020/11/15 18:42:58 config.go:20: 日志开始 2020-11-15 18:42:58.942224 +0800 CST m=+0.002966563
+Log:2020/11/15 18:42:58 valite_test.go:23: TestValidate Key: 'User.UserPwd' Error:Field validation for 'UserPwd' failed on the 'required' tag
+Log:2020/11/15 18:46:40 config.go:20: 日志开始 2020-11-15 18:46:40.105286 +0800 CST m=+0.002639237
+Log:2020/11/15 18:46:40 valite_test.go:25: TestValidate: 
+ Key: 'User.UserPwd' Error:Field validation for 'UserPwd' failed on the 'required' tag
+Log:2020/11/15 18:47:02 config.go:20: 日志开始 2020-11-15 18:47:02.317621 +0800 CST m=+0.003427365
+Log:2020/11/15 18:47:02 valite_test.go:25: TestValidate: 
+ Key: 'User.UserName' Error:Field validation for 'UserName' failed on the 'min' tag
+Log:2020/11/15 18:47:02 valite_test.go:25: TestValidate: 
+ Key: 'User.UserPwd' Error:Field validation for 'UserPwd' failed on the 'required' tag

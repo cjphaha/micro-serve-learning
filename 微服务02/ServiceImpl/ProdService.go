@@ -31,7 +31,7 @@ func(*ProdService) GetProdsList(ctx context.Context,in *Services.ProdsRequest,re
 
 
 func(*ProdService) GetProdsDetail(ctx context.Context, req *Services.ProdsRequest, rsp *Services.ProdDetailResponse) error {
-	time.Sleep(time.Second*3)
+	//time.Sleep(time.Second*3)
 	rsp.Data = newProd(req.ProdId,"商品详情")
 	return nil
 }

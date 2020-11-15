@@ -1,0 +1,19 @@
+syntax = "proto3";
+package Services;
+import "google/protobuf/timestamp.proto";
+//import "Models.proto";
+message UserModel{
+  int32 user_id = 1;
+  string user_name = 2;
+  string user_pwd = 3;
+  google.protobuf.Timestamp user_date = 4;
+}
+
+message RegResponse{
+  string status = 1;
+  string message = 2;
+}
+
+service UserService{
+  rpc UserReg(UserModel) returns(RegResponse);
+}

@@ -2,6 +2,7 @@ package wrappers
 
 import (
 	"context"
+	"fmt"
 	"github.com/afex/hystrix-go/hystrix"
 	"github.com/micro/go-micro/client"
 	"miniserver/Services"
@@ -50,6 +51,7 @@ func(this *ProdsWrapper)Call(ctx context.Context, req client.Request, rsp interf
 		return this.Client.Call(ctx,req,rsp)
 	}, func(e error) error {
 		//defaultProds(rsp)
+		fmt.Println(e)
 		defaultData(rsp)
 		return nil
 	})

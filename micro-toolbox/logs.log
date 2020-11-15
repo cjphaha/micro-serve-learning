@@ -1,0 +1,49 @@
+Log:2020/11/15 18:42:25 config.go:20: 日志开始 2020-11-15 18:42:25.200002 +0800 CST m=+0.013678911
+Log:2020/11/15 19:02:03 config.go:20: 日志开始 2020-11-15 19:02:03.938086 +0800 CST m=+0.017505346
+Log:2020/11/15 19:02:08 UserService.go:22: 用户发送过来的数据为:  {2 cjp cj 0001-01-01 00:00:00 +0000 UTC}
+Log:2020/11/15 19:02:08 UserService.go:31: Error 1062: Duplicate entry '2' for key 'PRIMARY'
+Log:2020/11/15 19:03:38 config.go:20: 日志开始 2020-11-15 19:03:38.137216 +0800 CST m=+0.014858470
+Log:2020/11/15 19:04:08 UserService.go:22: 用户发送过来的数据为:  {2 cjp cj 0001-01-01 00:00:00 +0000 UTC}
+Log:2020/11/15 19:04:08 UserService.go:34: Error 1062: Duplicate entry '2' for key 'PRIMARY'
+Log:2020/11/15 19:05:08 config.go:20: 日志开始 2020-11-15 19:05:08.726672 +0800 CST m=+0.019862295
+Log:2020/11/15 19:05:49 UserService.go:22: 用户发送过来的数据为:  {2 cjp cj 0001-01-01 00:00:00 +0000 UTC}
+Log:2020/11/15 19:05:49 UserService.go:34: Error 1062: Duplicate entry '2' for key 'PRIMARY'
+Log:2020/11/15 19:06:13 config.go:20: 日志开始 2020-11-15 19:06:13.020159 +0800 CST m=+0.012242508
+Log:2020/11/15 19:07:39 UserService.go:22: 用户发送过来的数据为:  {2 cjp cj 0001-01-01 00:00:00 +0000 UTC}
+Log:2020/11/15 19:07:39 UserService.go:28: UserReg request参数错误: 
+ Key: 'User.UserPwd' Error:Field validation for 'UserPwd' failed on the 'min' tag
+Log:2020/11/15 19:07:39 UserService.go:34: Error 1062: Duplicate entry '2' for key 'PRIMARY'
+Log:2020/11/15 20:37:23 config.go:20: 日志开始 2020-11-15 20:37:23.837896 +0800 CST m=+0.011306084
+Log:2020/11/15 20:46:07 config.go:20: 日志开始 2020-11-15 20:46:07.299302 +0800 CST m=+0.010969561
+Log:2020/11/15 20:47:46 config.go:20: 日志开始 2020-11-15 20:47:46.292968 +0800 CST m=+0.010371596
+Log:2020/11/15 20:48:05 config.go:20: 日志开始 2020-11-15 20:48:05.760988 +0800 CST m=+0.022793966
+Log:2020/11/15 20:51:05 config.go:20: 日志开始 2020-11-15 20:51:05.903478 +0800 CST m=+0.012656775
+Log:2020/11/15 20:52:40 config.go:20: 日志开始 2020-11-15 20:52:40.314719 +0800 CST m=+0.012951580
+Log:2020/11/16 00:39:47 config.go:20: 日志开始 2020-11-16 00:39:47.331351 +0800 CST m=+0.006009992
+Log:2020/11/16 00:39:47 gin.go:54: %!s(chan os.Signal=0xc000074480)
+Log:2020/11/16 00:39:47 register.go:47: {"id":"1","result":{},"error":null}
+
+Log:2020/11/16 00:41:22 config.go:20: 日志开始 2020-11-16 00:41:22.051116 +0800 CST m=+0.005794075
+Log:2020/11/16 00:41:22 gin.go:54: %!s(chan os.Signal=0xc000324000)
+Log:2020/11/16 00:41:22 register.go:47: {"id":"1","result":{},"error":null}
+
+Log:2020/11/16 00:43:48 config.go:20: 日志开始 2020-11-16 00:43:48.345727 +0800 CST m=+0.005735168
+Log:2020/11/16 00:43:48 register.go:47: {"id":"1","result":{},"error":null}
+
+Log:2020/11/16 00:43:57 gin.go:54: interrupt
+Log:2020/11/16 00:43:57 register.go:47: {"id":"1","result":{},"error":null}
+
+Log:2020/11/16 00:44:32 config.go:20: 日志开始 2020-11-16 00:44:32.772534 +0800 CST m=+0.004551070
+Log:2020/11/16 00:44:32 register.go:47: {"id":"1","result":{},"error":null}
+
+Log:2020/11/16 00:44:36 gin.go:54: interrupt
+Log:2020/11/16 00:44:36 register.go:47: {"id":"1","result":{},"error":null}
+
+Log:2020/11/16 00:50:52 config.go:20: 日志开始 2020-11-16 00:50:52.472562 +0800 CST m=+0.004543815
+Log:2020/11/16 00:50:52 register.go:47: {"id":"1","result":{},"error":null}
+
+{"Jsonspc":"2.0","Method":"Registry.Register","Params":[{"Name":"com.cjp.gin2","Nodes":[{"Id":"test-4772ce89-ab9e-4b55-ab2e-f0f0430d7841","Port":8088,"Address":"localhost"}]}],"Id":1}
+Log:2020/11/16 00:51:03 gin.go:54: interrupt
+Log:2020/11/16 00:51:03 register.go:47: {"id":"1","result":{},"error":null}
+
+{"Jsonspc":"2.0","Method":"Registry.Deregister","Params":[{"Name":"com.cjp.gin2","Nodes":[{"Id":"test-4772ce89-ab9e-4b55-ab2e-f0f0430d7841","Port":8088,"Address":"localhost"}]}],"Id":1}
