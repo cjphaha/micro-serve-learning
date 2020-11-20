@@ -15,15 +15,13 @@ type JSONRequest struct {
 	Jsonspc string
 	Method string
 	Params []*Service
-	Id int
-}
-
+	Id i
 func NewJSONRequest(service *Service,endpoinr string) *JSONRequest{
 	return &JSONRequest{Jsonspc: "2.0",Method: endpoinr,Params: []*Service{service},Id: 1}
 }
 
 var (
-	RegistryURL = "http://localhost:8000"
+	RegistryURL = "http://localhost:2379"
 )
 /*
 注册的主体方法

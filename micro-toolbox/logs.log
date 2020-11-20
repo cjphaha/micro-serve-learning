@@ -47,3 +47,39 @@ Log:2020/11/16 00:51:03 gin.go:54: interrupt
 Log:2020/11/16 00:51:03 register.go:47: {"id":"1","result":{},"error":null}
 
 {"Jsonspc":"2.0","Method":"Registry.Deregister","Params":[{"Name":"com.cjp.gin2","Nodes":[{"Id":"test-4772ce89-ab9e-4b55-ab2e-f0f0430d7841","Port":8088,"Address":"localhost"}]}],"Id":1}
+Log:2020/11/17 15:42:58 config.go:20: 日志开始 2020-11-17 15:42:58.860752 +0800 CST m=+0.006956150
+Log:2020/11/17 15:42:58 register.go:40: Post "http://localhost:8000": dial tcp [::1]:8000: connect: connection refused
+Log:2020/11/17 15:43:48 config.go:20: 日志开始 2020-11-17 15:43:48.876041 +0800 CST m=+0.007985353
+Log:2020/11/17 15:43:48 register.go:40: Post "http://localhost:8000": dial tcp [::1]:8000: connect: connection refused
+Log:2020/11/17 15:43:56 config.go:20: 日志开始 2020-11-17 15:43:56.559181 +0800 CST m=+0.007156229
+Log:2020/11/17 15:43:56 register.go:40: Post "http://localhost:8000": dial tcp [::1]:8000: connect: connection refused
+Log:2020/11/17 15:45:01 config.go:20: 日志开始 2020-11-17 15:45:01.281244 +0800 CST m=+0.005395095
+Log:2020/11/17 15:45:01 register.go:47: 404 page not found
+
+{"Jsonspc":"2.0","Method":"Registry.Register","Params":[{"Name":"com.cjp.gin2","Nodes":[{"Id":"test-f43c83f0-4702-456f-937c-ce961886c6f4","Port":8088,"Address":"localhost"}]}],"Id":1}
+Log:2020/11/17 15:46:18 config.go:20: 日志开始 2020-11-17 15:46:18.419513 +0800 CST m=+0.013630328
+Log:2020/11/17 15:46:18 gormconfig.go:22: dial tcp 127.0.0.1:3307: connect: connection refused
+Log:2020/11/17 15:46:54 config.go:20: 日志开始 2020-11-17 15:46:54.774707 +0800 CST m=+0.013948334
+Log:2020/11/17 15:47:13 gin.go:54: interrupt
+Log:2020/11/17 15:47:13 register.go:47: 404 page not found
+
+{"Jsonspc":"2.0","Method":"Registry.Deregister","Params":[{"Name":"com.cjp.gin2","Nodes":[{"Id":"test-f43c83f0-4702-456f-937c-ce961886c6f4","Port":8088,"Address":"localhost"}]}],"Id":1}
+Log:2020/11/17 15:47:16 config.go:20: 日志开始 2020-11-17 15:47:16.71203 +0800 CST m=+0.006780605
+Log:2020/11/17 15:47:16 register.go:40: Post "http://localhost:8000": dial tcp [::1]:8000: connect: connection refused
+Log:2020/11/17 15:49:57 config.go:20: 日志开始 2020-11-17 15:49:57.730339 +0800 CST m=+0.005709021
+Log:2020/11/17 15:49:57 register.go:47: 404 page not found
+{"Jsonspc":"2.0","Method":"Registry.Register","Params":[{"Name":"com.cjp.gin2","Nodes":[{"Id":"test-0e4074f5-a76e-42c0-b1a1-2ead9ada76db","Port":8088,"Address":"localhost"}]}],"Id":1}
+Log:2020/11/17 16:09:15 gin.go:54: interrupt
+Log:2020/11/17 16:09:15 register.go:47: 404 page not found
+{"Jsonspc":"2.0","Method":"Registry.Deregister","Params":[{"Name":"com.cjp.gin2","Nodes":[{"Id":"test-0e4074f5-a76e-42c0-b1a1-2ead9ada76db","Port":8088,"Address":"localhost"}]}],"Id":1}
+Log:2020/11/17 16:09:20 config.go:20: 日志开始 2020-11-17 16:09:20.108622 +0800 CST m=+0.005684756
+Log:2020/11/17 16:09:20 gin.go:54: listen tcp :8088: bind: address already in use
+Log:2020/11/17 16:09:20 register.go:47: {"id":"1","result":{},"error":null}
+
+{"Jsonspc":"2.0","Method":"Registry.Deregister","Params":[{"Name":"com.cjp.gin2","Nodes":[{"Id":"test-4553cbfb-2c96-4b20-b872-6785dfe178bc","Port":8088,"Address":"localhost"}]}],"Id":1}
+Log:2020/11/17 16:10:29 config.go:20: 日志开始 2020-11-17 16:10:29.864308 +0800 CST m=+0.013158649
+Log:2020/11/17 16:12:07 config.go:20: 日志开始 2020-11-17 16:12:07.750853 +0800 CST m=+0.014008806
+Log:2020/11/17 16:15:42 config.go:20: 日志开始 2020-11-17 16:15:42.789891 +0800 CST m=+0.006919783
+Log:2020/11/17 16:15:42 register.go:47: 404 page not found
+
+{"Jsonspc":"2.0","Method":"Registry.Register","Params":[{"Name":"com.cjp.gin2","Nodes":[{"Id":"test-f8afc98d-ac1f-4bf5-a72a-5ec25ca964ce","Port":8088,"Address":"localhost"}]}],"Id":1}
