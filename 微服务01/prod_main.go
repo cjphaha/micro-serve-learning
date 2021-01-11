@@ -40,14 +40,15 @@ func main() {
 		micro.Address(":8012"),
 		micro.Registry(consulReg),//注册到consul
 		//micro.WrapClient(NewLogWrapper),//注册装饰器
-		micro.WrapClient(wrappers.NewProdsWrapper),//降级函数
+		micro.WrapClient(wrappers.NewProdsWrapper),//降级函数,微服务02超过3秒不响应就会触发
 		)
 	prodService := Services.NewProdService("Prodserve",myService.Client())
+	//prodService := Services.NewProdService("Prodserve",micro.NewService().Client())
 	httpServer := web.NewService(//对应于http，这是在consul里面注册的过程
 		web.Name("httpProdService"), //服务名
 		web.Address(":8011"),
 		web.Handler(Weblib.NewGinRouter(prodService)),
-		web.Metadata(map[string]string{"protocol" : "http"}),
+		//web.Metadata(map[string]string{"protocol" : "http"}),
 		web.Registry(consulReg),
 	)
 	httpServer.Init()

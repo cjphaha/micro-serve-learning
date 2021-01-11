@@ -17,8 +17,9 @@ func main(){
 		micro.Name("api.cjp.com.service"),
 		micro.Address(":8013"),
 		micro.Registry(etcdReg),
+		//micro.Registry(consulReg)
 		)
-	//将自定义的myservices注册进去
+	//将自定义的myservices注册进去,注册服务
 	Services.RegisterTestServiceHandler(myServices.Server(),new(ServicesImpl.TestService))
 	Services.RegisterUserServiceHandler(myServices.Server(),new(ServicesImpl.UserService))
 	myServices.Run()
