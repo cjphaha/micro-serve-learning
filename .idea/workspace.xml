@@ -20,15 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57b9acb6-43a1-4e0f-ad7a-cbc65ac1f62e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/micro-toolbox/microv1.14之后的一些变化.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro-toolbox/弃用.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro-toolbox/普通http调用rpc.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-toolbox/ServicesImpl/TestService.go" beforeDir="false" afterPath="$PROJECT_DIR$/micro-toolbox/ServicesImpl/TestService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-toolbox/dashbord.sh" beforeDir="false" afterPath="$PROJECT_DIR$/micro-toolbox/dashbord.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-toolbox/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/micro-toolbox/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/微服务01/prod_main.go" beforeDir="false" afterPath="$PROJECT_DIR$/微服务01/prod_main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/微服务02/ServiceImpl/ProdService.go" beforeDir="false" afterPath="$PROJECT_DIR$/微服务02/ServiceImpl/ProdService.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
